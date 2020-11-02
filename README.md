@@ -15,34 +15,11 @@ Erlang is a programming language used to build massively scalable soft real-time
 ## Run it as the REPL
 
 ```console
-➸ docker run -it --rm erlang
-Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
+➸ docker run -it --rm quay.io/ibmz/erlang:23.1.1
+Erlang/OTP 23 [erts-11.1.1] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [hipe]
 
-Eshell V9.0  (abort with ^G)
-1> uptime().
-3 seconds
-ok
-2>                                 % use Ctrl+G to call the shell switch
-User switch command
- --> ?
-  c [nn]            - connect to job
-  i [nn]            - interrupt job
-  k [nn]            - kill job
-  j                 - list all jobs
-  s [shell]         - start local shell
-  r [node [shell]]  - start remote shell
-  q                 - quit erlang
-  ? | h             - this message
- --> q
-➸ docker run -it --rm -h erlang.local erlang erl -name snode@erlang.local
-Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
-
-Eshell V9.0  (abort with ^G)
-(snode@erlang.local)1> erlang:system_info(otp_release).
-"20"
-(snode@erlang.local)2>
-User switch command
---> q
+Eshell V11.1.1  (abort with ^G)
+1>
 ```
 
 ## Run an Erlang escript
@@ -60,7 +37,7 @@ CMD [ "escript", "script.erl" ]
 2. Build the image.
 `docker build -t script-image image .`
 
-3. Run the image in a conatiner.
+3. Run a container using the image.
 `docker run --name script-contianer script-image`
 
 # License
