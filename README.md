@@ -24,7 +24,7 @@ Eshell V11.1.1  (abort with ^G)
 
 ## Run an Erlang escript
 
-1. Create a `Dockerfile` that includes the Erlang script that you want to run.
+1. Create a `Dockerfile` that includes the Erlang escript that you want to run.
 ```
 FROM quay.io/ibmz/erlang:23.1.1
 
@@ -37,7 +37,7 @@ CMD [ "escript", "script.erl" ]
 2. Build the image.
 `docker build -t script-image image .`
 
-3. Run a container using the image.
+3. Run a container using the image that you just built.
 `docker run --name script-contianer script-image`
 
 # License
