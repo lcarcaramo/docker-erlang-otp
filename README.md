@@ -1,8 +1,10 @@
 # Tags
-> _Built from [`quay.io/ibmz/alpine:3.12`](https://quay.io/repository/ibmz/alpine?tab=info)_
--	[`23.1.1`](https://github.com/lcarcaramo/docker-erlang-otp/blob/master/s390x/23/alpine/Dockerfile) - [![Build Status](https://travis-ci.com/lcarcaramo/docker-erlang-otp.svg?branch=master)](https://travis-ci.com/lcarcaramo/docker-erlang-otp)
+> _Built from [`quay.io/ibm/alpine:3.12`](https://quay.io/repository/ibm/alpine?tab=info)_
+-	`23.1.1` - [![Build Status](https://travis-ci.com/lcarcaramo/docker-erlang-otp.svg?branch=master)](https://travis-ci.com/lcarcaramo/docker-erlang-otp)
 
-# What is Erlang?
+### __[Original Source Code](https://github.com/erlang/docker-erlang-otp)__
+
+# Erlang
 
 Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. Some of its uses are in telecoms, banking, e-commerce, computer telephony and instant messaging. Erlang's runtime system has built-in support for concurrency, distribution and fault tolerance.
 
@@ -15,7 +17,7 @@ Erlang is a programming language used to build massively scalable soft real-time
 ## Run it as the REPL
 
 ```console
-➸ docker run -it --rm quay.io/ibmz/erlang:23.1.1
+? docker run -it --rm quay.io/ibm/erlang:23.1.1
 Erlang/OTP 23 [erts-11.1.1] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [hipe]
 
 Eshell V11.1.1  (abort with ^G)
@@ -26,7 +28,7 @@ Eshell V11.1.1  (abort with ^G)
 
 1. Create a `Dockerfile` that includes the Erlang escript that you want to run.
 ```
-FROM quay.io/ibmz/erlang:23.1.1
+FROM quay.io/ibm/erlang:23.1.1
 
 WORKDIR /home
 
